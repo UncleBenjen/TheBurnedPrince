@@ -1,0 +1,98 @@
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	height:100%;
+	width:100%;	
+	padding:0; 
+	margin:0; 
+	background-color: #212121;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+
+.container{
+	height:100%;
+	width:100%; 
+	
+	background: url(../img/sparks.gif) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.flex-column{
+    display: -webkit-flex;
+	display:flex; 
+
+	flex-direction: column; 
+	flex-wrap: nowrap; 
+}
+
+.flex-center{
+    -webkit-justify-content: center;
+	justify-content: center;
+
+	-webkit-align-items: center; 
+	align-items:center;	
+}
+
+.center{
+	text-align: center;
+}
+
+.title{
+	color: #9E9E9E; 
+
+	font-family: 'Playfair Display', serif; 
+	font-size: 11vmin; 
+	font-style: italic; 
+	font-weight: 700; 
+}
+
+.subtitle{
+	color: #8D6E63; 
+	text-transform: uppercase;
+
+	font-family: 'Vast Shadow';
+	font-size: 6vmin;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;  
+    letter-spacing: 1vmin; 
+
+    border-top:double #9E9E9E; 
+    border-bottom:double #9E9E9E;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	/* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-webkit-animation-fill-mode:forwards;  
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:500ms;
+	-moz-animation-duration:500ms;
+	animation-duration:500ms;
+}
+.fade-in.first {
+	-webkit-animation-delay: 400ms;
+	-moz-animation-delay: 400ms;
+	animation-delay: 400ms;
+}
+
+.fade-in.second {
+	-webkit-animation-delay: 700ms;
+	-moz-animation-delay: 700ms;
+	animation-delay: 700ms;
+}
